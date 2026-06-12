@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2d1b33">
+  <title>Dat & Duong | Cinematic Glass Constellation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="preloader" class="preloader"><div class="preloader__mark">D <span>♥</span> D</div><p>Dang gom nhung vi sao...</p></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="ambient-layer" id="particles" aria-hidden="true"></div>
+
+  <header class="hero section" id="hero">
+    <div class="hero__glow"></div>
+    <div class="glass-card hero__card reveal fade-up" data-parallax>
+      <p class="eyebrow">Prologue</p>
+      <h1>Dat & Duong</h1>
+      <p class="tagline">Mot cau chuyen tinh yeu duoc viet bang anh sang, ky niem va nhung vi sao.</p>
+      <time datetime="2023-03-15">Bat dau tu 15.03.2023</time>
+    </div>
+    <a class="scroll-cue" href="#story">Cuon de bat dau</a>
+  </header>
+
+  <main>
+    <section class="section story" id="story">
+      <div class="chapter reveal fade-up"><span>Act I</span><h2>The Beginning</h2></div>
+      <div id="storyGrid" class="story-grid"></div>
+    </section>
+
+    <section class="section timeline-section" id="timeline">
+      <div class="chapter reveal fade-up"><span>Act II</span><h2>Falling In Love</h2></div>
+      <div id="timelineList" class="timeline"></div>
+    </section>
+
+    <section class="section albums-section" id="albums">
+      <div class="section-heading reveal fade-up"><p class="eyebrow">Nhung khoanh khac</p><h2>Photo Albums</h2></div>
+      <div id="albumTabs" class="album-tabs reveal fade-up"></div>
+      <div id="albumGrid" class="album-grid"></div>
+    </section>
+
+    <section class="section letters-section" id="letters">
+      <div class="chapter reveal fade-up"><span>Act III</span><h2>Words Unspoken</h2></div>
+      <div id="lettersGrid" class="letters-grid"></div>
+    </section>
+
+    <section class="section map-section" id="map">
+      <div class="section-heading reveal fade-up"><p class="eyebrow">Dau chan</p><h2>Journey Map</h2></div>
+      <div class="glass-card map-card reveal scale-in"><svg id="journeyMap" viewBox="0 0 900 420" role="img" aria-label="Ban do hanh trinh"></svg></div>
+    </section>
+
+    <section class="section soundtrack-section" id="soundtrack">
+      <div class="section-heading reveal fade-up"><p class="eyebrow">Giai dieu</p><h2>Our Soundtrack</h2></div>
+      <div id="trackList" class="track-list"></div>
+    </section>
+
+    <section class="section counter-section" id="counter">
+      <div class="section-heading reveal fade-up"><p class="eyebrow">Chung minh da...</p><h2>Love Counter</h2></div>
+      <div id="loveCounter" class="counter-grid reveal fade-up"></div>
+      <div id="statsGrid" class="stats-grid"></div>
+    </section>
+
+    <section class="section finale" id="finale">
+      <canvas id="constellationCanvas" aria-hidden="true"></canvas>
+      <div class="finale__content reveal fade-up"><p class="eyebrow">Constellation Finale</p><h2>Va cau chuyen van tiep tuc...</h2><p>Moi ky niem la mot ngoi sao. Khi nam tay nhau, chung minh thanh ca bau troi.</p><small>Made with love by Dat & Duong</small></div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

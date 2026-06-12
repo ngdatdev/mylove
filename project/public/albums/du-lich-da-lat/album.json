@@ -1,0 +1,11 @@
+{
+  "title": "Đà Lạt mộng mơ",
+  "date": "2023-07-20",
+  "location": "Đà Lạt, Lâm Đồng",
+  "description": "3 ngày 2 đêm lạc giữa sương mù và hoa dại. Cà phê sáng, đạp xe chiều, và ngắm sao đêm...",
+  "photos": [
+    { "file": "cover.png", "caption": "Sương mù buổi sáng Đà Lạt" },
+    { "file": "cover.png", "caption": "Đường hoa quanh Hồ Xuân Hương" },
+    { "file": "cover.png", "caption": "Bữa tối ấm cúng trong mưa nhẹ" }
+  ]
+}

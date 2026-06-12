@@ -1,0 +1,47 @@
+{
+  "albums": [
+    {
+      "id": "hen-ho-dau-tien",
+      "title": "Hẹn hò đầu tiên",
+      "cover": "/albums/hen-ho-dau-tien/cover.png",
+      "date": "2023-03-15",
+      "description": "Quán cafe nhỏ, ly nước chanh, và trái tim đập nhanh hơn bình thường...",
+      "category": "milestones",
+      "photoCount": 3
+    },
+    {
+      "id": "du-lich-da-lat",
+      "title": "Đà Lạt mộng mơ",
+      "cover": "/albums/du-lich-da-lat/cover.png",
+      "date": "2023-07-20",
+      "description": "3 ngày 2 đêm lạc giữa sương mù và hoa dại...",
+      "category": "travel",
+      "photoCount": 3
+    },
+    {
+      "id": "ngay-thuong",
+      "title": "Những ngày thường",
+      "cover": "/albums/hen-ho-dau-tien/cover.png",
+      "date": "2023-09-01",
+      "description": "Những khoảnh khắc bình dị mà không thể nào quên...",
+      "category": "daily",
+      "photoCount": 3
+    },
+    {
+      "id": "sinh-nhat",
+      "title": "Sinh nhật đặc biệt",
+      "cover": "/albums/du-lich-da-lat/cover.png",
+      "date": "2023-11-10",
+      "description": "Bữa tối bất ngờ, nến sáng, và nụ cười không tắt...",
+      "category": "special",
+      "photoCount": 3
+    }
+  ],
+  "categories": [
+    { "id": "all", "label": "Tất cả", "emoji": "✨" },
+    { "id": "milestones", "label": "Cột mốc", "emoji": "💍" },
+    { "id": "travel", "label": "Du lịch", "emoji": "✈️" },
+    { "id": "daily", "label": "Đời thường", "emoji": "☕" },
+    { "id": "special", "label": "Đặc biệt", "emoji": "🎉" }
+  ]
+}
