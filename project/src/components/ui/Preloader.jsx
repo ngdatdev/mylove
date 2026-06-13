@@ -1,5 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import loadingAnimation from '../../assets/loading.lottie';
 
 export default function Preloader() {
   const [progress, setProgress] = useState(0);
@@ -41,23 +43,14 @@ export default function Preloader() {
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#FFF0F5]"
         >
-          {/* Animated Heart SVG */}
-          <div className="relative w-24 h-24 mb-6">
-            <svg viewBox="0 0 50 50" className="w-full h-full stroke-[#8B5CF6] stroke-[1.5] fill-transparent">
-              <motion.path
-                d="M 25,15 C 25,15 20,5 10,5 C -2,5 0,22 25,45 C 50,22 52,5 40,5 C 30,5 25,15 25,15 Z"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: progress / 100 }}
-                transition={{ duration: 0.1 }}
-              />
-              <motion.path
-                d="M 25,15 C 25,15 20,5 10,5 C -2,5 0,22 25,45 C 50,22 52,5 40,5 C 30,5 25,15 25,15 Z"
-                initial={{ fill: 'rgba(232,160,191,0)' }}
-                animate={{ fill: progress === 100 ? 'rgba(232,160,191,0.5)' : 'rgba(232,160,191,0)' }}
-                transition={{ duration: 0.5 }}
-                className="stroke-none"
-              />
-            </svg>
+          {/* Lottie Animation */}
+          <div className="w-48 h-48 mb-4">
+            <DotLottieReact
+              src={loadingAnimation}
+              loop
+              autoplay
+              style={{ width: '100%', height: '100%' }}
+            />
           </div>
           
           <div className="overflow-hidden">
@@ -68,16 +61,15 @@ export default function Preloader() {
               style={{ fontFamily: 'var(--font-display)' }}
               className="italic text-2xl text-purple-800 tracking-wider mb-2"
             >
-              Gói ghém kỷ niệm...
             </motion.p>
           </div>
           
-          <div className="font-mono text-xl text-purple-500 font-semibold w-16 text-center">
+          <div className="font-mono text-xl text-pink-500 font-semibold w-16 text-center">
             {progress}%
           </div>
           
           {/* Progress bar line */}
-          <div className="w-64 h-[2px] bg-purple-200 mt-6 rounded-full overflow-hidden">
+          <div className="w-64 h-[2px] bg-pink-800 mt-6 rounded-full overflow-hidden">
             <motion.div 
               className="h-full bg-gradient-to-r from-[#E8A0BF] to-[#8B5CF6]"
               style={{ width: `${progress}%` }}
@@ -89,3 +81,4 @@ export default function Preloader() {
     </AnimatePresence>
   );
 }
+

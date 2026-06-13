@@ -10,10 +10,12 @@ export default function SoundtrackSection() {
         <p className="section-subtitle">Một đĩa vinyl hồng xoay giữa các track như quỹ đạo cảm xúc.</p>
       </motion.div>
       <div className="mx-auto grid items-center gap-10 md:grid-cols-[.85fr_1.15fr]">
-        <motion.div className="relative mx-auto h-72 w-72 rounded-full bg-[conic-gradient(from_0deg,#3a1725,#df1d73,#ffd6e8,#3a1725)] p-8 shadow-[0_40px_120px_rgba(223,29,115,.22)]" animate={{ rotate: 360 }} transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}>
-          <div className="h-full w-full rounded-full border-[18px] border-[#3a1725]/70 bg-[#fff7fb]" />
-          <div className="absolute left-1/2 top-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff72ad]" />
-        </motion.div>
+        <div className="flex h-full items-center justify-center">
+          <motion.div className="relative h-72 w-72 rounded-full bg-[conic-gradient(from_0deg,#3a1725,#df1d73,#ffd6e8,#3a1725)] p-8 shadow-[0_40px_120px_rgba(223,29,115,.22)]" animate={{ rotate: 360 }} transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}>
+            <div className="h-full w-full rounded-full border-[18px] border-[#3a1725]/70 bg-[#fff7fb]" />
+            <div className="absolute left-1/2 top-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff72ad]" />
+          </motion.div>
+        </div>
         <div className="space-y-4">
           {content.soundtrack.map((track, i) => (
             <motion.div key={track.id} initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.65, delay: i * 0.08 }} whileHover={{ x: 14 }} className="glass group flex items-center gap-5 p-4">

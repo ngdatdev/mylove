@@ -1,11 +1,11 @@
 {
-  "title": "Hẹn hò đầu tiên",
+  "title": "Em",
   "date": "2023-03-15",
-  "location": "Cafe The Workshop, Quận 1, TP.HCM",
+  "location": "Cafe The Workshop",
   "description": "Lần đầu ngồi đối diện nhau, tim đập nhanh hơn bình thường. Ly chanh muối, nhạc nhẹ, và ánh mắt không biết nhìn đi đâu...",
   "photos": [
-    { "file": "cover.png", "caption": "Quán cafe nhỏ — nơi mọi thứ bắt đầu" },
-    { "file": "cover.png", "caption": "Ly nước chanh và những câu chuyện dài" },
-    { "file": "cover.png", "caption": "Con đường về nhà hôm đó" }
+    { "file": "553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg", "caption": "Quán cafe nhỏ — nơi mọi thứ bắt đầu" },
+    { "file": "95c61a44-1e62-4b0f-ab53-b4fa8b6866cd.jpg", "caption": "Ly nước chanh và những câu chuyện dài" },
+    { "file": "b09947e5-3233-47e6-83d6-13773731672b.jpg", "caption": "Con đường về nhà hôm đó" }
   ]
 }

@@ -25,9 +25,10 @@ export default function AlbumsSection() {
       <motion.div initial={{ opacity: 0, scale: 0.94 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative text-center">
         <span className="chapter-badge">Gallery / hover portal</span>
         <h2 className="section-title mt-5">Những khoảnh khắc</h2>
-        <p className="section-subtitle">Một masonry gallery hồng, ảnh mở ra như những ô cửa ký ức.</p>
+        <p className="section-subtitle">Cậu ấy và tớ.</p>
       </motion.div>
-      {manifest && <div className="mb-10 flex flex-wrap justify-center gap-3">{manifest.categories.map(cat => <button key={cat.id} onClick={() => setActiveCategory(cat.id)} className={`rounded-full px-5 py-3 text-sm font-extrabold transition ${activeCategory === cat.id ? 'bg-[#df1d73] text-white shadow-[0_18px_50px_rgba(223,29,115,.28)]' : 'bg-white/60 text-[#6d4052] backdrop-blur hover:bg-white'}`}>{cat.emoji} {cat.label}</button>)}</div>}
+      {manifest && <div className="mb-10 flex flex-wrap justify-center gap-3 mb-10 flex flex-wrap justify-center gap-2">{manifest.categories.map(cat => <button key={cat.id} onClick={() => setActiveCategory(cat.id)} className={`rounded-full px-5 py-3 text-sm font-extrabold transition ${activeCategory === cat.id ? 'bg-[#df1d73] text-white shadow-[0_18px_50px_rgba(223,29,115,.28)]' : 'bg-white/60 text-[#6d4052] backdrop-blur hover:bg-white'}`}>{cat.emoji} {cat.label}</button>)}</div>}
+      <div className='h-4'></div>
       <div className="mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((album, i) => (
           <motion.button key={album.id} onClick={() => openAlbumById(album.id)} initial={{ opacity: 0, y: 70, clipPath: 'inset(40% round 30px)' }} whileInView={{ opacity: 1, y: 0, clipPath: 'inset(0% round 30px)' }} viewport={{ once: true }} transition={{ duration: 0.75, delay: i * 0.08 }} whileHover={{ y: -12 }} className={`group relative overflow-hidden rounded-[34px] text-left shadow-[0_28px_80px_rgba(223,29,115,.15)]`}>

@@ -2,8 +2,8 @@ export const content = {
   couple: {
     name1: "Đạt",
     name2: "Dương",
-    startDate: "2023-02-14", // Valentine day — thay bằng ngày thật
-    tagline: "Từ hai người xa lạ, thành một thế giới",
+    startDate: "2026-5-9",
+    tagline: "...",
     subTagline: "Đây là câu chuyện của chúng mình ✨",
   },
 
@@ -32,7 +32,7 @@ export const content = {
       title: "Tin nhắn đầu tiên...",
       content:
         "Anh gõ đi gõ lại không biết bao nhiêu lần. Xóa. Gõ lại. Xóa. Cuối cùng chỉ dám nhắn 'Hi em'. Đơn giản vậy thôi mà tim hồi hộp như thi đại học.",
-      image: "/assets/hero.png",
+      image: "/assets/5a62edf3-16b4-466b-bcf4-0f21ddb6c76f.jpg",
       align: "left",
     },
     {
@@ -49,52 +49,28 @@ export const content = {
   timeline: [
     {
       id: 1,
-      date: "14/02/2023",
+      date: "27/4/2026",
       emoji: "💌",
       title: "Tin nhắn đầu tiên",
-      description: "Một lời chào đơn giản, nhưng bắt đầu cả một câu chuyện dài.",
-      image: "/assets/hero.png",
+      description: "Thế là chúng tớ quen nhau.",
+      image: "/assets/8323d256-aa15-4f83-8beb-3469c9b5bc04.jpg",
     },
     {
       id: 2,
-      date: "15/03/2023",
+      date: "9/5/2026",
       emoji: "☕",
       title: "Hẹn hò lần đầu",
-      description: "Cafe, chuyện trò, và khoảnh khắc không muốn chia tay.",
-      image: "/albums/hen-ho-dau-tien/cover.png",
+      description: "Cafe, chuyện trò, và khoảnh khắc không muốn chia lyyy.",
+      image: "/assets/adc4544e-dc7c-4d8a-a711-1ddc30e20d6a.jpg",
     },
     {
       id: 3,
-      date: "14/05/2023",
+      date: "9/5/2026",
       emoji: "💑",
-      title: "Chính thức bên nhau",
+      title: "Một ngày đẹp trời",
       description: "Từ hôm đó, chúng mình không còn là 'bạn bè' nữa.",
-      image: "/assets/hero.png",
-    },
-    {
-      id: 4,
-      date: "20/07/2023",
-      emoji: "✈️",
-      title: "Chuyến đi đầu tiên",
-      description: "Đà Lạt, sương mù, và những ký ức không bao giờ phai.",
-      image: "/albums/du-lich-da-lat/cover.png",
-    },
-    {
-      id: 5,
-      date: "14/02/2024",
-      emoji: "🎂",
-      title: "1 năm bên nhau",
-      description: "Nhìn lại một năm qua, mình may mắn có nhau.",
-      image: "/assets/hero.png",
-    },
-    {
-      id: 6,
-      date: "14/05/2024",
-      emoji: "🌸",
-      title: "Hơn 1 năm yêu",
-      description: "Và hành trình vẫn đang tiếp tục, đẹp hơn mỗi ngày.",
-      image: "/assets/hero.png",
-    },
+      image: "/assets/bc53cb3e-8fac-49f0-adfb-aec905751221.jpg",
+    }
   ],
 
   loveLetters: [
@@ -104,7 +80,7 @@ export const content = {
       to: "Dương",
       subject: "Lần đầu anh dám nói thật",
       content:
-        "Dương ơi, hôm đó anh không dám nhìn thẳng vào mắt em khi nói. Anh chỉ biết rằng mỗi sáng thức dậy, điều đầu tiên anh nghĩ đến là em. Và anh không muốn giả vờ gì nữa. Anh thích em.",
+        "Yêu emm",
     },
     {
       id: 2,
@@ -112,7 +88,7 @@ export const content = {
       to: "Đạt",
       subject: "Em muốn anh biết điều này",
       content:
-        "Anh à, em không dễ nói những điều này lắm. Nhưng mà em muốn anh biết: cái cách anh nhớ những chi tiết nhỏ — màu đồ uống em hay gọi, bài hát em nghe khi buồn — mấy cái đó làm em thấy được quan tâm thật sự.",
+        "Anh ơi anh à",
     },
     {
       id: 3,
@@ -120,7 +96,7 @@ export const content = {
       to: "Tương lai",
       subject: "Lời hứa chúng mình viết cùng nhau",
       content:
-        "Hứa sẽ cùng nhau đi qua những ngày khó. Hứa sẽ vẫn nắm tay nhau khi tóc bạc. Hứa sẽ luôn là nơi an toàn nhất của nhau. Và hứa sẽ không bao giờ ngừng kể câu chuyện này.",
+        "Nhót.",
     },
   ],
 
@@ -143,7 +119,7 @@ export const content = {
         date: "07/2023",
         x: 60,
         y: 55,
-        image: "/albums/du-lich-da-lat/cover.png",
+        image: "/albums/du-lich-da-lat/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg",
       },
       {
         id: 3,
@@ -169,38 +145,24 @@ export const content = {
   soundtrack: [
     {
       id: 1,
-      title: "Có Chắc Yêu Là Đây",
-      artist: "Sơn Tùng M-TP",
-      reason: "Bài hát chúng mình nghe cùng nhau lần đầu tiên.",
+      title: "Đôi bờ",
+      artist: "Trúc Nhân",
+      reason: "Bài hát em thích khi anh nói cho em",
       color: "#FFB3D1",
     },
     {
       id: 2,
-      title: "Hôm Nay Tôi Buồn",
-      artist: "Phương Ly",
-      reason: "Bài em hay nghe lúc nhớ anh.",
+      title: "Đừng làm trái tim anh đau",
+      artist: "Sơn Tùng M-TP",
+      reason: "Cái tên nói lên tất cả hihi.",
       color: "#C4B5FD",
     },
     {
-      id: 3,
-      title: "Như Những Phút Ban Đầu",
-      artist: "Mỹ Tâm",
-      reason: "Bài anh đặt làm ringtone lúc mới quen em.",
-      color: "#FFD6A5",
-    },
-    {
       id: 4,
-      title: "Em Của Ngày Hôm Qua",
-      artist: "Sơn Tùng M-TP",
-      reason: "Chúng mình hát bài này trong chuyến đi Đà Lạt.",
+      title: "Drop dead",
+      artist: "Olivia Rodrigo",
+      reason: "Bài hát mà em yêu thích.",
       color: "#CAFFBF",
-    },
-    {
-      id: 5,
-      title: "Từ Hôm Nay",
-      artist: "Bích Phương",
-      reason: "Kỷ niệm 1 năm, anh tặng em bài này.",
-      color: "#FFB3D1",
     },
   ],
 
@@ -214,21 +176,20 @@ export const content = {
   ],
 
   constellationStars: [
-    { x: 20, y: 30, label: "Lần đầu gặp" },
-    { x: 35, y: 15, label: "Tin nhắn đầu" },
-    { x: 55, y: 10, label: "Hẹn hò đầu" },
-    { x: 75, y: 20, label: "Chính thức yêu" },
-    { x: 85, y: 40, label: "Đà Lạt" },
-    { x: 80, y: 60, label: "Hội An" },
-    { x: 65, y: 75, label: "1 năm yêu" },
-    { x: 45, y: 85, label: "Hà Nội" },
-    { x: 25, y: 75, label: "Tương lai" },
-    { x: 15, y: 55, label: "Mãi bên nhau" },
+    { x: 20, y: 30, label: "" },
+    { x: 35, y: 15, label: "" },
+    { x: 55, y: 10, label: "" },
+    { x: 75, y: 20, label: "" },
+    { x: 85, y: 40, label: "" },
+    { x: 80, y: 60, label: "" },
+    { x: 65, y: 75, label: "" },
+    { x: 45, y: 85, label: "" },
+    { x: 25, y: 75, label: "" },
+    { x: 15, y: 55, label: "" },
   ],
 
   closing: {
     quote: "Và câu chuyện vẫn đang tiếp tục...",
-    promise: "Chúng mình hứa sẽ tiếp tục viết những trang đẹp nhất.",
-    credit: "Made with 💕 by Đạt & Dương · 2024",
+    promise: "Chúng mình hứa sẽ tiếp tục viết những thứ tuyệt vời nhất.",
   },
 };

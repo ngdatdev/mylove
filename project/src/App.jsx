@@ -12,6 +12,7 @@ import SoundtrackSection from './components/sections/SoundtrackSection';
 import LoveCounterSection from './components/sections/LoveCounterSection';
 import ConstellationSection from './components/sections/ConstellationSection';
 import './index.css';
+import { BackgroundBeamsWithCollision } from './components/ui/BackgroundBeamsWithCollision';
 
 function ScrollProgress() {
   useEffect(() => {

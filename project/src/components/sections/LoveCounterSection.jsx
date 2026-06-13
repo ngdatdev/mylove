@@ -21,12 +21,11 @@ export default function LoveCounterSection() {
   return (
     <section id="counter" className="section bg-pink-purple" ref={ref}>
       <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-        <span className="chapter-badge">Data / love dashboard</span>
+        <span className="chapter-badge">Time love</span>
         <h2 className="section-title mt-5">Chúng mình đã bên nhau...</h2>
-        <p className="section-subtitle">Những con số chạy như một dashboard tình yêu.</p>
       </motion.div>
       <div className="mx-auto"><LoveTimer startDate={content.couple.startDate} /></div>
-      <div className="mx-auto mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{content.funStats.map((stat, i) => <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.9, y: 30 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true }} whileHover={{ rotate: i % 2 ? 2 : -2, y: -10 }} transition={{ duration: 0.6, delay: i * 0.07 }} className="glass p-6"><p className="mb-6 text-4xl">{stat.emoji}</p><p style={{ fontFamily: 'var(--font-display)' }} className="text-5xl font-black tracking-[-0.06em] text-[#df1d73]">{stat.value}</p><p className="mt-3 font-bold text-[#6d4052]">{stat.label}</p></motion.div>)}</div>
+      {/* <div className="mx-auto mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{content.funStats.map((stat, i) => <motion.div key={stat.label} initial={{ opacity: 0, scale: 0.9, y: 30 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true }} whileHover={{ rotate: i % 2 ? 2 : -2, y: -10 }} transition={{ duration: 0.6, delay: i * 0.07 }} className="glass p-6"><p className="mb-6 text-4xl">{stat.emoji}</p><p style={{ fontFamily: 'var(--font-display)' }} className="text-5xl font-black tracking-[-0.06em] text-[#df1d73]">{stat.value}</p><p className="mt-3 font-bold text-[#6d4052]">{stat.label}</p></motion.div>)}</div> */}
     </section>
   );
 }

@@ -1,55 +1,63 @@
 import { useState, useEffect, useRef } from 'react';
+import iCanFlyAudio from '../../assets/audio/i_can_fly.mp3';
 
 export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
-  const [shown, setShown] = useState(false);
   const audioRef = useRef(null);
+  const hasStarted = useRef(false);
 
-  // Show prompt after 2s
+  // Try to play; returns true if successful
+  const tryPlay = () => {
+    const audio = audioRef.current;
+    if (!audio || hasStarted.current) return;
+    audio.volume = 0.2;
+    const p = audio.play();
+    if (p !== undefined) {
+      p.then(() => {
+        hasStarted.current = true;
+        setPlaying(true);
+      }).catch(() => {
+        // Still blocked — will retry on next interaction
+      });
+    }
+  };
+
   useEffect(() => {
-    const t = setTimeout(() => setShown(true), 2000);
-    return () => clearTimeout(t);
+    // Attempt autoplay immediately (works if user already interacted)
+    tryPlay();
+
+    // Listen for the FIRST user interaction anywhere to unlock audio
+    const events = ['click', 'touchstart', 'keydown', 'scroll'];
+    const unlock = () => {
+      tryPlay();
+      if (hasStarted.current) {
+        events.forEach((e) => window.removeEventListener(e, unlock, true));
+      }
+    };
+    events.forEach((e) => window.addEventListener(e, unlock, { capture: true, passive: true }));
+
+    return () => {
+      events.forEach((e) => window.removeEventListener(e, unlock, true));
+    };
   }, []);
 
   const toggle = () => {
-    if (!audioRef.current) return;
+    const audio = audioRef.current;
+    if (!audio) return;
     if (playing) {
-      audioRef.current.pause();
+      audio.pause();
+      setPlaying(false);
     } else {
-      audioRef.current.play().catch(() => {});
+      audio.volume = 0.2;
+      audio.play().then(() => setPlaying(true)).catch(() => {});
     }
-    setPlaying(!playing);
   };
 
   return (
     <>
-      {/* Actual audio — swap src when you have a real file */}
-      <audio ref={audioRef} loop src="/assets/audio/bg-music.mp3" />
+      <audio ref={audioRef} loop preload="auto" src={iCanFlyAudio} />
 
-      {/* Prompt toast */}
-      {shown && !playing && (
-        <div
-          onClick={toggle}
-          style={{
-            position: 'fixed', bottom: 90, right: 28,
-            background: 'rgba(255,255,255,0.18)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(255,255,255,0.35)',
-            borderRadius: 50,
-            padding: '8px 16px',
-            fontSize: '0.8rem',
-            color: '#4A3555',
-            cursor: 'pointer',
-            zIndex: 1000,
-            whiteSpace: 'nowrap',
-            boxShadow: '0 4px 20px rgba(139,92,246,0.15)',
-          }}
-        >
-          🎵 Bật nhạc nền?
-        </div>
-      )}
-
-      {/* FAB button */}
+      {/* FAB button — bottom-right corner */}
       <button
         id="music-fab"
         onClick={toggle}
@@ -61,10 +69,11 @@ export default function MusicPlayer() {
           display: 'inline-block',
           animation: playing ? 'spin 3s linear infinite' : 'none',
         }}>
-          {playing ? '🎵' : '🎶'}
+          {playing ? '🔊' : '🔇'}
         </span>
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </button>
     </>
   );
 }
+

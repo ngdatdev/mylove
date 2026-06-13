@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..900,50..100,0..1&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=WindSong:wght@500&display=swap');
 @import "tailwindcss";
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; box-sizing: border-box; }
 
 :root {
   --rose-50: #fff7fb;

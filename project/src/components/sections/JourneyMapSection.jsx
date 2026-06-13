@@ -6,8 +6,8 @@ export default function JourneyMapSection() {
   const [activePin, setActivePin] = useState(content.journeyMap.locations[0]);
   const { locations } = content.journeyMap;
   return (
-    <section id="map" className="section bg-purple-blue">
-      <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+    <section id="map" className="">
+      {/* <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <span className="chapter-badge">Map / pulse route</span>
         <h2 className="section-title mt-5">Dấu chân của chúng mình</h2>
         <p className="section-subtitle">Một bản đồ trừu tượng: mỗi điểm đến là một nhịp hồng phát sáng.</p>
@@ -28,7 +28,7 @@ export default function JourneyMapSection() {
             <div className="mt-7 flex flex-wrap gap-2">{locations.map(loc => <button key={loc.id} onClick={() => setActivePin(loc)} className={`rounded-full px-4 py-2 text-xs font-black uppercase tracking-wider ${activePin.id === loc.id ? 'bg-[#ff72ad] text-white' : 'bg-white/10 text-white/60'}`}>{loc.name}</button>)}</div>
           </motion.aside>
         </AnimatePresence>
-      </div>
+      </div> */}
     </section>
   );
 }
