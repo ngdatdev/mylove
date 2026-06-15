@@ -1,21 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Lightbox from '../ui/Lightbox';
+import { content } from '../../data/content';
 
 export default function AlbumsSection() {
-  const [manifest, setManifest] = useState(null);
+  const manifest = content.albumsData;
   const [activeCategory, setActiveCategory] = useState('all');
   const [openAlbum, setOpenAlbum] = useState(null);
   const [albumPhotos, setAlbumPhotos] = useState([]);
   const [lightboxIdx, setLightboxIdx] = useState(null);
 
-  useEffect(() => { fetch('/albums/manifest.json').then(r => r.json()).then(setManifest).catch(console.error); }, []);
-
-  const openAlbumById = async (id) => {
-    const data = await fetch(`/albums/${id}/album.json`).then(r => r.json());
-    setOpenAlbum(data);
-    setAlbumPhotos(data.photos.map(p => ({ src: `/albums/${id}/${p.file}`, caption: p.caption })));
-    setLightboxIdx(0);
+  const openAlbumById = (id) => {
+    const data = manifest.albums.find(a => a.id === id);
+    if (data) {
+      setOpenAlbum(data);
+      setAlbumPhotos(data.photos || []);
+      setLightboxIdx(0);
+    }
   };
 
   const filtered = !manifest ? [] : activeCategory === 'all' ? manifest.albums : manifest.albums.filter(a => a.category === activeCategory);
@@ -35,7 +36,7 @@ export default function AlbumsSection() {
             <img src={album.cover} alt={album.title} className="h-[300px] w-full object-cover transition duration-700 group-hover:scale-110 md:h-[360px]" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(58,23,37,.88))]" />
             <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-              <p className="mb-3 text-xs font-black uppercase tracking-[0.25em] text-[#ffd6e8]">{album.photoCount} ảnh / {album.date}</p>
+              <p className="mb-3 text-xs font-black uppercase tracking-[0.25em] text-[#ffd6e8]">{album.photos?.length || 0} ảnh / {album.date}</p>
               <h3 style={{ fontFamily: 'var(--font-display)' }} className="text-4xl font-black leading-none tracking-[-0.05em]">{album.title}</h3>
               <p className="mt-3 text-sm leading-6 text-white/72">{album.description}</p>
             </div>

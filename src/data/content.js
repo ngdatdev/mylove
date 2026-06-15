@@ -192,4 +192,64 @@ export const content = {
     quote: "Và câu chuyện vẫn đang tiếp tục...",
     promise: "Chúng mình hứa sẽ tiếp tục viết những thứ tuyệt vời nhất.",
   },
+
+  albumsData: {
+    categories: [
+      { id: "all", label: "Tất cả", emoji: "✨" },
+      { id: "milestones", label: "Cột mốc", emoji: "💍" },
+      { id: "travel", label: "Du lịch", emoji: "✈️" },
+      { id: "daily", label: "Đời thường", emoji: "☕" },
+      { id: "special", label: "Đặc biệt", emoji: "🎉" }
+    ],
+    albums: [
+      // {
+      //   id: "hen-ho-dau-tien",
+      //   title: "Hẹn hò đầu tiên",
+      //   cover: "/albums/du-lich-da-lat/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg",
+      //   date: "2023-03-15",
+      //   category: "milestones",
+      //   description: "Lần đầu ngồi đối diện nhau, tim đập nhanh hơn bình thường. Ly chanh muối, nhạc nhẹ, và ánh mắt không biết nhìn đi đâu...",
+      //   photos: [
+      //     { src: "/albums/hen-ho-dau-tien/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg", caption: "Quán cafe nhỏ — nơi mọi thứ bắt đầu" },
+      //     { src: "/albums/hen-ho-dau-tien/95c61a44-1e62-4b0f-ab53-b4fa8b6866cd.jpg", caption: "Ly nước chanh và những câu chuyện dài" },
+      //     { src: "/albums/hen-ho-dau-tien/b09947e5-3233-47e6-83d6-13773731672b.jpg", caption: "Con đường về nhà hôm đó" }
+      //   ]
+      // },
+      // {
+      //   id: "du-lich-da-lat",
+      //   title: "Một nơi mộng mơ",
+      //   cover: "/albums/du-lich-da-lat/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg",
+      //   date: "2023-07-20",
+      //   category: "travel",
+      //   description: "3 ngày 2 đêm lạc giữa sương mù và hoa dại. Cà phê sáng, đạp xe chiều, và ngắm sao đêm...",
+      //   photos: [
+      //     { src: "/albums/du-lich-da-lat/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg", caption: "Sương mù buổi sáng Đà Lạt" },
+      //     { src: "/albums/du-lich-da-lat/95c61a44-1e62-4b0f-ab53-b4fa8b6866cd.jpg", caption: "Đường hoa quanh Hồ Xuân Hương" },
+      //     { src: "/albums/du-lich-da-lat/b09947e5-3233-47e6-83d6-13773731672b.jpg", caption: "Bữa tối ấm cúng trong mưa nhẹ" }
+      //   ]
+      // },
+      {
+        id: "ngay-thuong",
+        title: "Những ngày thường",
+        cover: "/albums/nhung-ngay-thuong/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg",
+        date: "2026-06-01",
+        category: "daily",
+        description: "Những khoảnh khắc đời thường đáng yêu...",
+        photos: [
+          { src: "/albums/nhung-ngay-thuong/553eeb06-30e8-4ac1-8cbc-878ed9649fb3.jpg", caption: "Đáng iu zzz..." }
+        ]
+      },
+      {
+        id: "sinh-nhat",
+        title: "Ngày đặc biệt",
+        cover: "/albums/ngay-sinh-nhat/cover-birthday.jpg",
+        date: "2026-06-14",
+        category: "special",
+        description: "Đón tuổi mới cùng nhau...",
+        photos: [
+          { src: "/albums/ngay-sinh-nhat/c56f5bca-3802-4613-b44d-16dc2a5d6aeb.jpg", caption: "Sinh nhật vui vẻ nhé! 🎉" }
+        ]
+      }
+    ]
+  }
 };

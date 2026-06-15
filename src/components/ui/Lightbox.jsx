@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 
 export default function Lightbox({ photos, initialIndex = 0, onClose }) {
   const [idx, setIdx] = useState(initialIndex);
@@ -18,14 +19,16 @@ export default function Lightbox({ photos, initialIndex = 0, onClose }) {
 
   const photo = photos[idx];
 
-  return (
+  const content = (
     <div className="lightbox-overlay" onClick={onClose}>
-      <div onClick={e => e.stopPropagation()} style={{ position: 'relative', maxWidth: '90vw', textAlign: 'center' }}>
-        <img className="lightbox-img" src={photo.src} alt={photo.caption || ''} />
-        {photo.caption && <p className="lightbox-caption">{photo.caption}</p>}
-        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', marginTop: '0.5rem' }}>
-          {idx + 1} / {photos.length}
-        </p>
+      <div onClick={e => e.stopPropagation()} className="w-full h-full">
+        <div className="lightbox-scroll-container">
+          <img className="lightbox-img" src={photo.src} alt={photo.caption || ''} />
+          {photo.caption && <p className="lightbox-caption">{photo.caption}</p>}
+          <p className="lightbox-counter">
+            {idx + 1} / {photos.length}
+          </p>
+        </div>
       </div>
 
       {photos.length > 1 && (
@@ -37,4 +40,6 @@ export default function Lightbox({ photos, initialIndex = 0, onClose }) {
       <button className="lightbox-close" onClick={onClose}>✕</button>
     </div>
   );
+
+  return createPortal(content, document.body);
 }
